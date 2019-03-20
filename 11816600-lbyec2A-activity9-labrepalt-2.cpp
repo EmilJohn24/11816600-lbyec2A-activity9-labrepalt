@@ -39,7 +39,10 @@ int main() {
       // display the horizontal axis labels
       textcolor(TYELLOW);
       gotoxy(i*6+10,45);
-      printf("%i-%i",10*i+1, 10*(i+1));
+      int label;
+      if (i == 0) label = 0;
+      else label = 10*i + 1;
+      printf("%i-%i",label, 10*(i+1));
       textcolor(TGREEN);
       
       // display the vertical bars
